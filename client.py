@@ -75,6 +75,7 @@ class client:
         self.network.connect(self.ip, self.port)
 
     def client_loop(self):
+        print("Oyun Başladı")
         while True:
             received = self.network.receive_client()
             rtype = received["type"]
