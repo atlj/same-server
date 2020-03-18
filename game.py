@@ -2,14 +2,13 @@ import random
 class game: 
     def __init__(self):
         self.table_deck = []
+        self.patterns = ["H", "T", "C", "P"]
+        self.numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "K", "Q", "J"] #1 means 10
 
     def generate_deck(self):
         self.host_deck = []
-        patterns = ["H", "T", "C", "P"]
-        numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "K", "Q", "J"] #1 means 10
-        
-        for pattern in patterns:
-            for number in numbers:
+        for pattern in self.patterns:
+            for number in self.numbers:
                 card = pattern + number
                 self.host_deck.append(card)
 
